@@ -17,7 +17,7 @@ Slutprojekt i kursen DB2022. I detta projekt kommer ska eleven redovisa inom SQL
 Nedan är ett ER-diagram på UNF-databasen när den har normaliserats.
 Diagramet är byggt med [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
 
-
+```mermaid
 
 erDiagram
     Student ||--o{ Phone : has
@@ -71,7 +71,7 @@ erDiagram
         string Grade
     }
     
-
+```
 
 
 
