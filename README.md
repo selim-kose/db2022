@@ -19,9 +19,65 @@ Diagramet är byggt med [Mermaid](https://mermaid.js.org/syntax/entityRelationsh
 
 
 
+erDiagram
+    Student ||--o{ Phone : has
+    Student }|--o| Grade : has
+    Student ||--o| PhoneList : has
+    Student ||--o{ StudentSchool : attends
+    School ||--o{ StudentSchool : enrolls
+    Student ||--o{ StudentHobby : has
+    Hobbies ||--o{ StudentHobby : persues
+    
+    
+    Student {
+        int StudentId
+        string Name
+        int GradeId
+    }
+    
+    Phone {
+        int PhoneId
+        int StudentId
+        varchar Type 
+        varchar Number
+    }
+    PhoneList {
+        int StudentId
+        text Numbers
+    }
+    
+    School {
+        int SchoolId
+        varchar School
+        varchar City
+    }
+    
+    StudentSchool {
+        int StudentId
+        int SchoolId
+    }
+    
+    Hobbies {
+        int Id
+        string Hobby
+    }
+    StudentHobby {
+        decimal StudentId
+        varchar Hobby
+    }
+    
+    Grade {
+        int Id
+        string Grade
+    }
+    
 
 
 
+
+
+
+---
 
 ##### Förklaring
 
