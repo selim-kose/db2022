@@ -1,0 +1,35 @@
+
+
+USE iths;
+
+DROP TABLE IF EXISTS Student, UNF;
+
+CREATE TABLE `UNF` (
+    `Id` DECIMAL(38, 0) NOT NULL,
+    `Name` VARCHAR(26) NOT NULL,
+    `Grade` VARCHAR(11) NOT NULL,
+    `Hobbies` VARCHAR(25),
+    `City` VARCHAR(10) NOT NULL,
+    `School` VARCHAR(30) NOT NULL,
+    `HomePhone` VARCHAR(15),
+    `JobPhone` VARCHAR(15),
+    `MobilePhone1` VARCHAR(15),
+    `MobilePhone2` VARCHAR(15)
+)  ENGINE=INNODB;
+
+CREATE TABLE `Student`(
+	`Id` DECIMAL(38,0) NOT NULL PRIMARY KEY,
+	`Name` VARCHAR(26) NOT NULL
+)ENGINE=INNODB;
+
+
+LOAD DATA INFILE '/var/lib/mysql-files/denormalized-data.csv'
+INTO TABLE UNF
+CHARACTER SET latin1
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+INSERT INTO Student (Id,Name) SELECT DISTINCT Id,Name FROM UNF; 
