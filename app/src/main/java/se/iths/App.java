@@ -9,125 +9,54 @@ import se.iths.pojo.Artist;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 public class App {
 
-/*
-    public static void main(String[] args) throws SQLException {
-
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/iths","iths", "iths");
-        ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM test");
-
-        while(rs.next()){
-            System.out.println( rs.getString(1) +" "+rs.getString(2));
-
-        }
-
-        PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO test (name,age) VALUES (?,?)");
-        preparedStatement.setString(1,"Dr.Alban");
-        preparedStatement.setInt(2, 50);
-        preparedStatement.execute();
-
-        connection.close();
-
-    }
-*/
-
-
-  /*  public static void main(String[] args) {
-    App app = new App();
-
-    try {
-        app.load();
-    }catch (SQLException e) {
-        System.out.println("error" + e);
-    }
-
-
-
-
-    }
-
-    private void load() throws SQLException{
-        List<Artist> artists = loadArtists();
-        for(Artist i: artists){
-            System.out.println(i);
-        }
-
-    }
-
-    private List<Artist> loadArtists() throws SQLException{
-        List<Artist> artists = new ArrayList<>();
-
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-        ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM Artist");
-
-        while(resultSet.next()){
-            int id = resultSet.getInt(1);
-            String name = resultSet.getString(2);
-            Artist artist = new Artist(id,name);
-            artists.add(artist);
-
-            List<Album> albums = loadAlbums(artist.getId());
-            for(Album i: albums){
-                System.out.println(i);
-            }
-        }
-        resultSet.close();
-        connection.close();
-        return artists;
-
-    }
-
-    private List<Album> loadAlbums(int artistId) throws SQLException{
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths","iths");
-        List<Album> albums = new ArrayList<>();
-
-        PreparedStatement preparedStatement = connection.prepareStatement("SELECT Title FROM Album WHERE ArtistId=?");
-        preparedStatement.setInt(1,artistId);
-        ResultSet resultSet = preparedStatement.executeQuery();
-
-        while(resultSet.next()){
-            int id = resultSet.getInt(1);
-            String name =resultSet.getString(2);
-            Album album = new Album(id,name);
-            albums.add(album);
-        }
-        resultSet.close();
-        connection.close();
-
-        return albums;
-
-    }
-*/
 
     public static void main(String[] args)  {
-        App app = new App();
         try {
-            app.load();
+
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
+            ResultSet rs = con.createStatement().executeQuery("SELECT * FROM Album LIMIT 5");
+
+            List<Album> albums = new ArrayList<>();
+
+            while(rs.next()){
+                int id = rs.getInt(1);
+                String albumName = rs.getString(2);
+                albums.add(new Album(id,albumName));
+            }
+
+            for (Album i:albums){
+                System.out.println(i);
+            }
+
         } catch (SQLException e) {
-            System.err.println(String.format("Något gick fel vid inläsning av databas! (%s)", e.toString()));
+            System.out.println("Något gick fel vid inläsning av databas! " + e);
         }
     }
 
     private void load() throws SQLException {
-        Collection<Artist> artists = loadArtists();
+        List<Artist> artists = loadArtists();
         for(Artist artist: artists){
             System.out.println(artist);
         }
     }
 
-    private Collection<Artist>  loadArtists() throws SQLException {
-        Collection<Artist> artists = new ArrayList<>();
+    private List<Artist> loadArtists() throws SQLException {
+        List<Artist> artists = new ArrayList<>();
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
         ResultSet rs = con.createStatement().executeQuery("SELECT ArtistId, AlbumId, Name, Title FROM Artist JOIN Album USING (ArtistId) ORDER BY ArtistId");
+
+
+
         while(rs.next()){
             int id = rs.getInt("ArtistId");
             String name = rs.getString("Name");
             Artist artist = new Artist(id, name);
             artists.add(artist);
-            Collection<Album> albums = loadAlbums(artist.getId());
+            List<Album> albums = loadAlbums(artist.getId());
             for(Album i : albums) {
                 artist.add(i);
             }
@@ -136,9 +65,9 @@ public class App {
         con.close();
         return artists;
     }
-    private Collection<Album> loadAlbums(int artistId) throws  SQLException{
+    private List<Album> loadAlbums(int artistId) throws  SQLException{
         Connection con  = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-        Collection<Album> albums = new ArrayList<>();
+        List<Album> albums = new ArrayList<>();
 
         PreparedStatement stmt = con.prepareStatement("SELECT AlbumId,Title FROM Album WHERE ArtistId =?");
         stmt.setInt(1, artistId);//Sätt värde för första frågetecknet
