@@ -1,6 +1,9 @@
 package se.iths;
 
+import se.iths.pojo.Album;
+
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,22 +11,29 @@ public class CRUD {
 
     public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS User(Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(30) NOT NULL)";
     static List<String> names = Arrays.asList("Selim", "Eve", "Aslan");
+    static List<Album> albums = new ArrayList<>();
     public static void main(String[] args) {
 
         CRUD crud = new CRUD();
 
 
 
-        try {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-            con.createStatement().executeUpdate(CREATE_TABLE);
 
+
+        try {
+            System.out.println(crud.getAlbumById(1));
+             ;
+            //Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
+           // con.createStatement().executeUpdate(CREATE_TABLE);
+
+/*
 
             crud.addUser("Mohammed");
             crud.addUsers(names);
             crud.updateUser(2, "Pelle");
             crud.removeUser("Selim");
 
+*/
 
 
         }catch (SQLException e){
@@ -31,6 +41,12 @@ public class CRUD {
         }
 
 
+    }
+
+    public Connection startConnection() throws SQLException {
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
+
+        return con;
     }
 
     public static Statement statement() throws SQLException{
@@ -88,4 +104,28 @@ public class CRUD {
         ps.executeUpdate();
     }
 
+    public String getAlbumById(int id) throws SQLException{
+        PreparedStatement ps = startConnection().prepareStatement("SELECT * FROM Album WHERE AlbumId = ?");
+        ps.setInt(1,id);
+
+        ResultSet rs = ps.executeQuery();
+
+        String name = null;
+
+
+        while (rs.next()){
+            name = rs.getString(2);
+        }
+        return name;
+
+    }
+
+    public Album getAlbumByName(String name){
+        return new Album(1,"bla");
+    }
+
+
+    public void AddAlbumToList(Album album) {
+        albums.add(album);
+    }
 }
