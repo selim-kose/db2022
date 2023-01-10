@@ -9,9 +9,9 @@ Slutprojekt i kursen DB2022. I detta projekt kommer ska eleven redovisa inom SQL
 
 
 För att följa instruktionerna nedan krävs följande applikationer:
-[Docker Desktop](https://www.docker.com/products/docker-desktop/)
-[Gradle](https://gradle.org/)
-[Git](https://git-scm.com/)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- [Gradle](https://gradle.org/)
+- [Git](https://git-scm.com/)
 
 
 
