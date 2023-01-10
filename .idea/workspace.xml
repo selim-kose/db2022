@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cfe0f420-c340-4a2e-b697-fb06f6d689f5" name="Changes" comment="" />
+=======
+    <list default="true" id="cfe0f420-c340-4a2e-b697-fb06f6d689f5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/Mikeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/CRUD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/SQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/se/iths/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/se/iths/AppTest.java" afterDir="false" />
+    </list>
+>>>>>>> 7f503f2777e3fcb2e21ec2e984617c82cbd34bc4
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,8 +87,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CRUD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="se.iths.CRUD" />
+    <configuration name="Mikeal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="se.iths.Mikeal" />
       <module name="db2022.app.main" />
       <extension name="coverage">
         <pattern>
@@ -91,7 +104,7 @@
       <list>
         <item itemvalue="Application.CRUD" />
         <item itemvalue="Application.App2" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Mikeal" />
       </list>
     </recent_temporary>
   </component>
