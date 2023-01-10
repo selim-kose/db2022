@@ -8,6 +8,12 @@
 Slutprojekt i kursen DB2022. I detta projekt kommer ska eleven redovisa inom SQL,normalisering samt Java(jdbc) mot en databas.
 
 
+För att följa instruktionerna nedan krävs följande applikationer:
+[Docker Desktop](https://www.docker.com/products/docker-desktop/)
+[Gradle](https://gradle.org/)
+[Git](https://git-scm.com/)
+
+
 
 ---
 
@@ -16,14 +22,6 @@ Slutprojekt i kursen DB2022. I detta projekt kommer ska eleven redovisa inom SQL
 
 Nedan är ett ER-diagram på UNF-databasen när den har normaliserats.
 Diagramet är byggt med [Mermaid](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
-
-
-Slutprojekt i kursen DB2022. I detta projekt kommer ska eleven redovisa inom SQL,normalisering av data samt Java(JDBC) mot en databas.
-
-För att följa instruktionerna nedan krävs följande applikationer:
-[Docker Desktop](https://www.docker.com/products/docker-desktop/)
-[Gradle](https://gradle.org/)
-[Git](https://git-scm.com/)
 
 
 
