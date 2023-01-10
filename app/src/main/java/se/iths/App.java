@@ -1,41 +1,35 @@
 package se.iths;
 
-import se.iths.pojo.Album;
+import se.iths.Controller.Controller;
+import se.iths.pojo.Student;
+import se.iths.repo.StudentRepo;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import static se.iths.SQL.*;
 
 public class App {
 
     public static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS User(Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, Name VARCHAR(30) NOT NULL)";
-    static List<String> names = Arrays.asList("Selim", "Eveliina", "Aslan","Maldini");
-    static List<Album> albums = new ArrayList<>();
+    static List<String> names = Arrays.asList("Selim Köse", "Eveliina Homonnai", "Aslan Sütemen","Paolo Maldini");
+
 
     public static void main(String[] args) {
 
-        App crud = new App();
-
-
-
+        Controller crud = new Controller();
 
 
         try {
-            System.out.println(crud.getAlbumById(1));
-             ;
-            //Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-           // con.createStatement().executeUpdate(CREATE_TABLE);
+            crud.addStudents(names);
+            crud.addStudent("Djingis Khan");
+            crud.updateStudent(2, "Pelle Svanslös");
+            crud.removeStudentById(1);
+            crud.getStudentById(40);
+            crud.addStudentToList(41);
 
-/*
-
-            crud.addUser("Djingis");
-            crud.addUsers(names);
-            crud.updateUser(2, "Pelle");
-            crud.removeUser("Selim");
-
-*/
+            for(Student i: crud.studentRepo.getStudents()){
+                System.out.println(i);
+            }
 
 
         }catch (SQLException e){
@@ -45,89 +39,4 @@ public class App {
 
     }
 
-    public Connection startConnection() throws SQLException {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths","iths" );
-
-        return con;
-    }
-
-    public static Statement statement() throws SQLException{
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-        Statement statement = con.createStatement();
-
-        return statement;
-    }
-
-    public void addUser(String name) throws SQLException{
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-        PreparedStatement ps = con.prepareStatement("INSERT INTO User(Name) VALUES (?)");
-        ps.setString(1, name);
-
-        ps.executeUpdate();
-    }
-
-
-    public void addUsers(List<String> users) throws SQLException{
-
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-        PreparedStatement preparedStatement = con.prepareStatement("INSERT INTO User(Name) VALUES(?)");
-
-
-        for(String i: users){
-            preparedStatement.setString(1,i);
-            preparedStatement.executeUpdate();
-        }
-
-       // statement().executeUpdate("INSERT INTO User(Name) VALUES('Selim')");
-
-        //    for(String i: names) {
-
-        //    }
-
-
-    }
-
-    public void removeAlbumById(int id) throws SQLException{
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-        statement().executeUpdate("DELETE FROM User WHERE Name = ''");
-        PreparedStatement ps = con.prepareStatement("DELETE FROM Album WHERE AlbumId = ?");
-        ps.setInt(1,id);
-
-        ps.executeUpdate();
-    }
-
-
-    public void updateUser(int id, String name) throws SQLException{
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Chinook", "iths", "iths");
-        PreparedStatement ps = con.prepareStatement("UPDATE User SET Name = ? WHERE Id = ?");
-        ps.setString(1,name);
-        ps.setInt(2,id);
-
-        ps.executeUpdate();
-    }
-
-    public String getAlbumById(int id) throws SQLException{
-        PreparedStatement ps = startConnection().prepareStatement("SELECT * FROM Album WHERE AlbumId = ?");
-        ps.setInt(1,id);
-
-        ResultSet rs = ps.executeQuery();
-
-        String name = null;
-
-
-        while (rs.next()){
-            name = rs.getString(2);
-        }
-        return name;
-
-    }
-
-    public Album getAlbumByName(String name){
-        return new Album(1,"bla");
-    }
-
-
-    public void AddAlbumToList(Album album) {
-        albums.add(album);
-    }
 }

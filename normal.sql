@@ -5,6 +5,9 @@ USE iths;
 DROP TABLE IF EXISTS Student, School, StudentSchool, Phone, Hobbies, Grade, UNF;
 DROP VIEW IF EXISTs PhoneList, StudentHobby;
 
+GRANT ALL ON Chinook.* TO iths@`%`;
+GRANT ALL ON iths.* TO iths@`%`;
+
 CREATE TABLE `UNF` (
     `Id` DECIMAL(38, 0) NOT NULL,
     `Name` VARCHAR(26) NOT NULL,
@@ -19,7 +22,7 @@ CREATE TABLE `UNF` (
 )  ENGINE=INNODB;
 
 CREATE TABLE `Student`(
-	`Id` DECIMAL(38,0) NOT NULL PRIMARY KEY,
+	`Id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	`Name` VARCHAR(26) NOT NULL
 )ENGINE=INNODB;
 

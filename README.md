@@ -85,3 +85,29 @@ erDiagram
 
 
 
+
+#### Instruktioner
+
+git clone https://github.com/selim-kose/db2022
+
+
+docker run -d --name iths-mysql\
+	 -e MYSQL_ROOT_USERNAME=root\
+	 -e MYSQL_ROOT_PASSWORD=root\
+	 -e MYSQL_USER=iths\
+	 -e MYSQL_PASSWORD=iths\
+	 -e MYSQL_DATABASE=iths\
+	 -p 3306:3306\
+	 -d mysql/mysql-server:latest
+
+
+docker cp denormalized-data.csv iths-mysql:/var/lib/mysql-files
+docker exec -i iths-mysql mysql -uroot -proot < normal.sql
+
+gradle run
+
+
+
+
+
+
