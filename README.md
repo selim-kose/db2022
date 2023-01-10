@@ -88,6 +88,8 @@ erDiagram
 
 #### Instruktioner
 
+```bash
+
 git clone https://github.com/selim-kose/db2022
 
 
@@ -106,7 +108,7 @@ docker exec -i iths-mysql mysql -uroot -proot < normal.sql
 
 gradle run
 
-
+```
 
 
 
