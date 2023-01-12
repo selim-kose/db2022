@@ -1,6 +1,6 @@
-package se.iths.repo;
+package se.iths.persistance;
 
-import se.iths.pojo.Student;
+import se.iths.entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;
