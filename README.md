@@ -96,10 +96,17 @@ erDiagram
 
 #### Instruktioner
 
+klona detta projekt till önskad mapp.
+
 ```bash
 
 git clone https://github.com/selim-kose/db2022
 
+```
+
+Starta en image av databesen MySQL
+
+```bash
 
 docker run -d --name iths-mysql\
 	 -e MYSQL_ROOT_USERNAME=root\
@@ -111,8 +118,27 @@ docker run -d --name iths-mysql\
 	 -d mysql/mysql-server:latest
 
 
+```
+
+Kopiera csv filen som innehåller data som vi kommer att normalisera. Den plaseras i din MySQL image
+
+```bash
+
 docker cp denormalized-data.csv iths-mysql:/var/lib/mysql-files
+
+```
+
+Kör SQL scriptfilen som för skapar en databas av csv filen ovan och sedan normailserar den.
+
+```bash
+
 docker exec -i iths-mysql mysql -uroot -proot < normal.sql
+
+```
+
+starta java projektet
+
+```bash
 
 gradle run
 
