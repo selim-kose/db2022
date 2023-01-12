@@ -1,4 +1,5 @@
-package se.iths.entity;
+
+package se.iths.model;
 
 public class Student {
 
@@ -12,6 +13,21 @@ public class Student {
         StudentName = studentName;
     }
 
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
+    }
+
+    public String getStudentName() {
+        return StudentName;
+    }
+
+    public void setStudentName(String studentName) {
+        StudentName = studentName;
+    }
 
     @Override
     public String toString() {

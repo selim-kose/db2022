@@ -1,7 +1,7 @@
 package se.iths;
 
 import se.iths.Controller.StudentController;
-import se.iths.entity.Student;
+import se.iths.model.Student;
 
 import java.sql.*;
 import java.util.Arrays;

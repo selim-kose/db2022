@@ -1,6 +1,6 @@
 package se.iths.persistance;
 
-import se.iths.entity.Student;
+import se.iths.model.Student;
 
 import java.util.ArrayList;
 import java.util.List;

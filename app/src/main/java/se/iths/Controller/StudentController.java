@@ -1,6 +1,6 @@
 package se.iths.Controller;
 
-import se.iths.entity.Student;
+import se.iths.model.Student;
 import se.iths.persistance.StudentRepo;
 
 import static se.iths.SQLConstants.*;

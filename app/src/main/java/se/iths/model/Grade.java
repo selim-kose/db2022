@@ -1,4 +1,4 @@
-package se.iths.entity;
+package se.iths.model;
 
 public class Grade {
     private int gradeId;
@@ -24,5 +24,13 @@ public class Grade {
 
     public void setGrade(String grade) {
         this.grade = grade;
+    }
+
+    @Override
+    public String toString() {
+        return "Grade{" +
+                "gradeId=" + gradeId +
+                ", grade='" + grade + '\'' +
+                '}';
     }
 }
