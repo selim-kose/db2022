@@ -1,6 +1,6 @@
 package se.iths.Controller;
 
-import se.iths.pojo.Student;
+import se.iths.model.Student;
 import se.iths.repo.StudentRepo;
 
 import java.sql.*;

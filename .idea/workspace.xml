@@ -4,20 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="cfe0f420-c340-4a2e-b697-fb06f6d689f5" name="Changes" comment="" />
-=======
-    <list default="true" id="cfe0f420-c340-4a2e-b697-fb06f6d689f5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/Mikeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="8abc765f-f6df-421a-992e-0a1251744b9b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-09_13_25__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-10_08_58_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023-01-10_08_58__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/CRUD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/SQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/SQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/se/iths/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/se/iths/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/Mikeal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/pojo/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/model/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/pojo/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/se/iths/repo/StudentRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/se/iths/repo/StudentRepo.java" afterDir="false" />
     </list>
->>>>>>> 7f503f2777e3fcb2e21ec2e984617c82cbd34bc4
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,100 +32,49 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Juxx1eJmZ8BjIGibYpdvyY4hbZ" />
+  <component name="ProjectId" id="2KBLvWVxmFYPbfJ7duFoLbLd7n5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RunManager" selected="Application.CRUD">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="se.iths.App" />
-      <module name="db2022.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="se.iths.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="se.iths.App2" />
-      <module name="db2022.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="se.iths.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Mikeal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="se.iths.Mikeal" />
-      <module name="db2022.app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="se.iths.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.CRUD" />
-        <item itemvalue="Application.App2" />
-        <item itemvalue="Application.Mikeal" />
-      </list>
-    </recent_temporary>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cfe0f420-c340-4a2e-b697-fb06f6d689f5" name="Changes" comment="" />
-      <created>1672942018909</created>
+      <changelist id="8abc765f-f6df-421a-992e-0a1251744b9b" name="Changes" comment="" />
+      <created>1673443259605</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1672942018909</updated>
-      <workItem from="1672942021817" duration="375000" />
-      <workItem from="1673015491162" duration="35387000" />
+      <updated>1673443259605</updated>
+      <workItem from="1673443261347" duration="1394000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

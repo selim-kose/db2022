@@ -1,6 +1,6 @@
 package se.iths.repo;
 
-import se.iths.pojo.Student;
+import se.iths.model.Student;
 
 import java.util.ArrayList;
 import java.util.List;

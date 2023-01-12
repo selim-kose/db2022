@@ -1,4 +1,4 @@
-package se.iths.pojo;
+package se.iths.model;
 
 public class Student {
 
